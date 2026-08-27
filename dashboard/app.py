@@ -1,23 +1,10 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
-from sqlalchemy import create_engine
-from dotenv import load_dotenv
-import os
 
-load_dotenv()
+import pandas as pd
 
-DB_HOST = os.getenv("DB_HOST")
-DB_PORT = os.getenv("DB_PORT")
-DB_NAME = os.getenv("DB_NAME")
-DB_USER = os.getenv("DB_USER")
-DB_PASSWORD = os.getenv("DB_PASSWORD")
-
-engine = create_engine(
-    f"mysql+mysqlconnector://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
-)
-
-df = pd.read_sql("SELECT * FROM production_data", engine)
+df = pd.read_csv("E:/Robiul/Backup_my_own_laptop/Folder_1/Skills/End to End Data project/production-data-analysis/data/processed/production_data_clean.csv")
 
 st.set_page_config(
     page_title="Production Performance Dashboard",
