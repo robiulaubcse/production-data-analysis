@@ -173,6 +173,6 @@ Run the dashboard:
 streamlit run dashboard/app.py
 ```
 
-## Repository
 
-GitHub: https://github.com/robiulaubcse/production-data-analysis
+
+Dashboard: https://appuction-data-analysis.streamlit.app/
